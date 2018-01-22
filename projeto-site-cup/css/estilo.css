@@ -1,0 +1,988 @@
+/* DEFINIÇÕES PADRÃO */
+
+* {
+    font-family: 'calibri';
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #FAFAFA;
+}
+
+
+/* SISTEMA DE GRID */
+
+.caixa,
+.linha,
+.c,
+.cabecalho,
+.barra-navegacao,
+.pop-login, 
+input {
+    box-sizing: border-box;
+}
+
+.linha:before,
+.linha:after {
+    content: " ";
+    display: table;
+}
+
+.linha:after {
+    clear: both;
+}
+
+.c {
+    position: relative;
+    float: left;
+    display: block;
+}
+
+.c+.c {
+    margin-left: 1.6%;
+}
+
+.c1 {
+    width: 6.86666666667%;
+}
+
+.c2 {
+    width: 15.3333333333%;
+}
+
+.c3 {
+    width: 23.8%;
+}
+
+.c4 {
+    width: 32.2666666667%;
+}
+
+.c5 {
+    width: 40.7333333333%;
+}
+
+.c6 {
+    width: 49.2%;
+}
+
+.c7 {
+    width: 57.6666666667%;
+}
+
+.c8 {
+    width: 66.1333333333%;
+}
+
+.c9 {
+    width: 74.6%;
+}
+
+.c10 {
+    width: 83.0666666667%;
+}
+
+.c11 {
+    width: 91.5333333333%;
+}
+
+.c12 {
+    width: 100%;
+    margin-left: 0;
+}
+
+@media only screen and (max-width: 992px) {
+    .c1,
+    .c2,
+    .c3,
+    .c4,
+    .c5,
+    .c6,
+    .c7,
+    .c8,
+    .c9,
+    .c10,
+    .c11,
+    .c12 {
+        float: none;
+        width: auto;
+        transition: 0.5s all;
+    }
+    .c+.c {
+        margin-left: 0;
+        transition: 0.5s all;
+    }
+}
+
+
+/* ESTILO */
+
+.caixa {
+    width: 75%;
+    margin: auto;
+}
+
+.c {
+    padding: 5px;
+    min-height: 30px;
+}
+
+.linha {
+    margin-bottom: 0px;
+}
+
+.linha:last-child {
+    margin-bottom: 0;
+}
+
+.c .c {
+    color: #eee;
+    background: #333;
+    border-color: #000;
+}
+
+.p {
+    font-family: 'calibri';
+    font-size: 18px;
+    color: #666666;
+}
+
+.p ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #666666;
+    transition: 0.3s all;
+    font-family: 'calibri';
+}
+
+.p ul li a:hover {
+    color: black;
+    transition: 0.3s all;
+}
+
+.opcao-membros {
+    margin-top: 6px;
+}
+
+@media only screen and (max-width: 992px) {
+    .caixa {
+        width: 75%;
+        padding: 0 2.5%;
+        transition: 0.5s all;
+    }
+    .linha {
+        margin-bottom: 0;
+        transition: 0.5s all;
+    }
+    .c {
+        margin-bottom: 0px;
+        transition: 0.5s all;
+    }
+    .linha:last-child .c:last-child {
+        margin-bottom: 0px;
+        transition: 0.5s all;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .caixa {
+        width: 100%;
+        padding: 0 2.5%;
+        transition: 0.5s all;
+    }
+    .linha {
+        margin-bottom: 0;
+        transition: 0.5s all;
+    }
+    .c {
+        margin-bottom: 0px;
+        transition: 0.5s all;
+    }
+    .linha:last-child .c:last-child {
+        margin-bottom: 0px;
+        transition: 0.5s all;
+    }
+}
+
+
+/* IMAGEM RESPONSIVA */
+
+.imagem {
+    width: 100%;
+}
+
+.imagem-index {
+    margin: 0px;
+}
+
+.quadro {
+    border: 1px solid #666666;
+    border-radius: 3px;
+    margin: 20px 0px;
+    padding: 20px 10px;
+    background: white;
+}
+
+.quadro .p {
+    margin: 15px 0px 5px 0px;
+}
+
+
+/* BOTÕES */
+
+.b {
+    border: 1px solid black;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    padding: 6px 12px;
+    transition: 0.3s all;
+    color: white;
+}
+
+.b:hover {
+    transition: 0.3s all;
+    color: white;
+}
+
+
+/* BOTÃO PADRÃO */
+
+.b-padrao {
+    border: 1px solid #666666;
+    color: #666666;
+    background: white;
+}
+
+.b-padrao:hover {
+    color: white;
+    background: #666666;
+}
+
+
+/* BOTÃO VERMELHO */
+
+.b-vermelho {
+    border: 1px solid #B40404;
+    background: #B40404;
+}
+
+.b-vermelho:hover {
+    border: 1px solid red;
+    background: red;
+}
+
+
+/* TÍTULOS */
+
+.titulo1 {
+    display: block;
+    color: red;
+    padding-bottom: 5px;
+    margin-bottom: 05px;
+    margin-top: 20px;
+}
+
+.titulo1-sublinhado {
+    display: block;
+    color: red;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #666666;
+    margin-bottom: 05px;
+    margin-top: 20px;
+}
+
+.titulo2 {
+    display: block;
+    color: #666666;
+    padding-bottom: 5px;
+    margin-bottom: 05px;
+    margin-top: 20px;
+}
+
+.titulo2 a {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s all;
+}
+
+.titulo2 a:hover {
+    color: red;
+    text-decoration: none;
+    transition: 0.3s all;
+}
+
+.titulo2-sublinhado {
+    display: block;
+    color: #666666;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #666666;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.titulo-conteudo-parallax {
+    display: block;
+    color: #B40404;
+    font-size: 55px;
+    padding-bottom: 5px;
+    margin-bottom: 05px;
+    margin-top: 20px;
+}
+
+/* ALINHAMENTOS DE TEXTO */
+
+.esquerda {
+    text-align: left;
+}
+
+.direita {
+    text-align: right;
+}
+
+.centralizar {
+    text-align: center;
+}
+
+.justificar {
+    text-align: justify;
+}
+
+
+/* FORMULÁRIO */
+
+.formulario {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.formulario input[type=text],
+input[type=number],
+input[type=email],
+input[type=password] {
+    width: 100%;
+    border: 0px 0px 0px 0px solid #666666;
+    -moz-width: 100%;
+    -webkit-width: 100%;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 2px;
+    border: 1px solid #666666;
+    padding: 5px;
+    -moz-padding: 4px;
+    -webkit-padding: 4px;
+    color: #666666;
+    font-size: 17px;
+    margin: 2px 0px 10px 0px;
+}
+
+.formulario input[type=radio] {
+    border: 1ps solid #666666;
+}
+
+.formulario textarea {
+    width: 98%;
+    height: 200px;
+    border: 0px 0px 0px 0px solid #666666;
+    -moz-width: 100%;
+    -webkit-width: 100%;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 2px;
+    border: 1px solid #666666;
+    padding: 5px;
+    -moz-padding: 4px;
+    -webkit-padding: 4px;
+    color: #666666;
+    font-size: 17px;
+    margin: 2px 0px 10px 0px;
+}
+
+.formulario input[type=number] {
+    font-size: 16px;
+    padding: 5px;
+}
+
+.formulario input[type=submit] {
+    margin: 10px 0px;
+}
+
+.formulario label {
+    font-family: 'calibri';
+    font-size: 19px;
+    color: #666666;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    width: 100%;
+    display: table;
+    position: relative;
+}
+
+.barra {
+    background: black;
+    padding: 0px 2.5%;
+}
+
+.logo {
+    display: inline-block;
+    color: red;
+    font-weight: lighter;
+    transition: 0.3s all;
+}
+
+.logo span {
+    color: red;
+    text-decoration: none;
+    position: relative;
+    top: -2px;
+}
+
+.menu1 {
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+}
+
+.menu1 ul {
+    list-style: none;
+}
+
+.menu1 ul li {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.menu1 a {
+    text-decoration: none;
+    margin: 0px 15px;
+    font-size: 20px;
+    color: #666666;
+    transition: 0.3s all;
+}
+
+.menu1 a:hover {
+    text-decoration: none;
+    margin: 0px 15px;
+    font-size: 20px;
+    color: WHITE;
+    transition: 0.3s all;
+}
+
+.menu1 li span {
+    color: #666666;
+}
+
+.menu1 li span:hover {
+    color: white;
+}
+
+.menu1-responsivo {
+    width: 100%;
+    display: block;
+}
+
+.menu1-responsivo ul {
+    text-align: center;
+    background: black;
+}
+
+.menu1-responsivo ul li {
+    padding: 15px 0px;
+}
+
+.menu1-responsivo a {
+    text-decoration: none;
+    padding: 15px 0px;
+    color: #666666;
+    transition: 0.3s all;
+    font-size: 20px;
+}
+
+.menu1-responsivo ul li a:hover {
+    color: white;
+    transition: 0.3s all;
+}
+
+.submenu1 {
+    width: 100%;
+    border-bottom: 1px solid #666666;
+    box-sizing: border-box;
+    display: inline-block;
+    position: absolute;
+    background: white;
+    z-index: 2;
+    display: none;
+    font-size: 18px;
+}
+
+.submenu1 ul {
+    margin: 3%;
+    display: inline-block;
+    width: 94%;
+    border: none;
+}
+
+.submenu1 ul li {
+    display: inline-block;
+    width: 26%;
+    margin: 0px 3%;
+    position: relative;
+    top: 0px;
+}
+
+.submenu1 ul li ul {
+    display: block;
+    border: none;
+}
+
+.submenu1 li ul li {
+    display: block;
+    list-style: none;
+    margin: 0px;
+    width: 100%;
+    border: none;
+}
+
+.submenu1 li ul li a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 18px;
+    transition: 0.3s all;
+}
+
+.submenu1 li ul li a:hover {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s all;
+}
+
+/*** SUBMENU RESPONSIVO ***/
+
+.submenu1-responsivo {
+    width: 100%;
+    border-bottom: 1px solid #666666;
+    box-sizing: border-box;
+    display: inline-block;
+    background: white;
+    z-index: 2;
+    display: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+.submenu1-responsivo ul {
+    display: inline-block;
+    width: 80%;
+    margin: 10%;
+}
+
+.submenu1-responsivo ul li {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.submenu1-responsivo ul li ul {
+    display: block;
+    margin: none;
+    margin: 0px;
+    border: none;
+    width: 100%;
+}
+
+.submenu1-responsivo li ul li {
+    display: block;
+    list-style: none;
+    margin: 0px;
+    width: 100%;
+}
+
+.submenu1-responsivo li ul li a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 19px;
+    transition: 0.3s all;
+}
+
+.submenu1-responsivo li ul li a:hover {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s all;
+}
+
+
+.link-responsivo {
+    position: absolute;
+    top: 0px;
+    right: 2.5%;
+    float: right;
+}
+
+.link-responsivo .b-menu span {
+    width: 15px;
+    height: 2px;
+}
+
+.link-responsivo .b-menu {
+    float: right;
+    background: black;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    margin: 22px 0;
+    position: relative;
+    height: 34px;
+    width: 40px;
+    padding: 0px;
+}
+
+.link-responsivo .b-menu:hover {
+    background: white;
+    border: 1px solid white;
+    color: black;
+}
+
+.link-responsivo .b-menu span:hover {
+    color: black;
+}
+
+.link-responsivo #login2 { 
+    color: #C0C0C0;
+    transition: 0.3s all;
+    top: 22px;
+    margin-right: 15px;
+}
+
+.link-responsivo #login2:hover { 
+    color: red;
+    transition: 0.3s all;
+}
+
+.pesquisa-login {
+    float: right;
+    margin: 22px 0px;
+    color: #C0C0C0;
+}
+
+.pesquisa-login span {
+    margin-left: 15px;
+    color: #C0C0C0;
+    transition: 0.3s all;
+}
+
+.pesquisa-login span:hover {
+    color: white;
+    transition: 0.3s all;
+}
+
+.pesquisa-login #login:hover {
+    color: red;
+    transition: 0.3s all;
+}
+
+.pesquisar-caixa {
+    border: 1px solid white;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background: white;
+    display: none;
+}
+
+.pesquisar-caixa button {
+    width: 14%;
+    height: 33px;
+    margin-left: 1%; 
+}
+
+#pesquisar-campo {
+    border: 1px solid #666666;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    width: 85%;
+    font-size: 18px;
+    padding: 5px;
+    color: #666666;
+}
+
+.menu2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #C0C0C0;
+    padding: 40px 0px;
+    background: white;
+}
+
+.menu2 ul {
+    list-style: none;
+    display: inline-block;
+}
+
+.menu2 ul li {
+    display: inline-block;
+}
+
+.menu2 a {
+    text-decoration: none;
+    margin: 0px 15px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s all;
+}
+
+.menu2 a:hover {
+    color: red;
+    transition: 0.3s all;
+}
+
+.menu2-responsivo {
+    width: 70%;
+    height: 100%;
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    background: white;
+    left: -1000px;
+    transition: 0.3s all;
+}
+
+.menu2-responsivo ul {
+    list-style: none;
+    width: 100%;
+    position: absolute;
+    padding: 25px;
+}
+
+.menu2-responsivo ul li {
+    display: block;
+    margin: 15px 0px;
+}
+
+.menu2-responsivo ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s all;
+}
+
+.menu2-responsivo ul li a:hover {
+    color: red;
+    transition: 0.3s all;
+}
+
+.pop-login {
+    z-index: 2;
+    padding: 15px;
+    margin: 0px 15%;
+    position: absolute;
+    top: 110px;
+    background: white;
+    border-radius: 3px;
+    width: 70%;
+    display: none;
+}
+
+/*** CORPO DO SITE ***/
+
+.item-projeto {
+    width: 100%;
+}
+
+.item-projeto img {
+    width: 65px;
+    height: 65px;
+    float: left;
+    margin-right: 20px;
+}
+
+.parallax {
+    width: 100%;
+    height: 45px;
+    position: fixed;
+    top: 0px;
+    z-index: -1;
+}
+
+.parallax #imagem2parallax {
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    top: 780%;
+}
+
+.pagina-parallax {
+    background: #F2F2F2 ;
+    position: relative;
+    padding-top: 30px; 
+}
+
+.conteudo-parallax {
+    width: 100%;
+    height: 350px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    display: table;
+}
+
+.conteudo-parallax p {
+    color: black;
+    font-size: 28px;
+}
+
+.conteudo-parallax button {
+    padding: 20px 40px;
+    font-size: 25px;
+    margin: 65px 0px 35px 0;
+}
+
+.conteudo-parallax button a {
+    text-decoration: none;
+    color: white;
+}
+
+.conteudo-parallax .icone {
+    border: 5px solid #666666;
+    border-radius: 10%;
+    display: inline-block;
+    padding: 10px;
+    background-color: white;
+    margin: 0px 0px 35px 0px;
+}
+
+.p li {
+    margin-left: 20px;
+}
+
+/*** RODAPÉ ***/
+footer {
+    width: 100%;
+    display: table;
+    position: relative;
+    bottom: 0px;
+    margin-bottom: 0px;
+    border-top: 1px  solid black;
+    margin-top: 40px;
+    padding: 35px 0px;
+    background: black;
+}
+
+.mais-informacoes {
+    margin-bottom: 25px;
+}
+
+.mais-informacoes ul {
+    list-style: none;
+}
+
+.mais-informacoes ul li {
+
+}
+
+.mais-informacoes ul li a{
+    text-decoration: none;
+    color: #666666;
+    transition: 0.3s all;
+}
+
+.mais-informacoes ul li a:hover{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s all;
+}
+
+.midias-sociais {
+    margin-bottom: 25px;
+    color: #666666;
+}
+
+.midias-sociais ul {
+    list-style: none;
+}
+
+.midias-sociais ul li {
+    display: inline-block;
+    margin-right: 30px; 
+}
+
+.midias-sociais ul li span {
+    color: #C0C0C0;
+    transition: 0.3s all;
+}
+
+.midias-sociais ul li #icone-facebook:hover {
+    color: #0404B4;
+    transition: 0.3s all;
+}
+
+.midias-sociais ul li a #icone-google:hover {
+    color: #FF4000;
+    transition: 0.3s all;
+}
+
+.midias-sociais ul li a #icone-twitter:hover {
+    color: #2E9AFE;
+    transition: 0.3s all;
+}
+
+.midias-sociais ul li #icone-youtube:hover {
+    color: red;
+    transition: 0.3s all;
+}
+
+.midias-sociais ul li #icone-instagram:hover {
+    color: #8B4513;
+    transition: 0.3s all;
+}
+
+.links {
+    margin-bottom: 10pX;
+}
+
+.links ul {
+    list-style: none;
+    color: #666666;
+}
+
+.links ul li {
+    display: inline-block;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: #666666;
+    transition: 0.3s all;
+}
+
+.links ul li a:hover {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s all;
+}
+
+/*** CLASSES PARA SEREM CHAMADAS ***/
+
+.pop-login-adaptar {
+    top: 0px;
+    margin: 0px;
+    border-radius: 0px;
+    width: 100%;
+    padding: 2.5%;
+}
+
+.chamar{
+    left: 0px;
+}
+
+.chamar-fundo {
+    background: #C0C0C0;
+}
