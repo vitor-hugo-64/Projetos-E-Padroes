@@ -17,18 +17,22 @@
 		</div>
 		<?php foreach ($data as $value) { ?>
 			<div class="row">
-				<div class="col c12">
+				<div class="col c6">
 					<section>
-						<label>Nome: </label><?php echo $value['nome']; ?>
-						<br>
-						<label>Livro: </label><?php echo $value['livro']; ?>
-						<br>
-						<label>Folha: </label><?php echo $value['folha']; ?>
-						<br>
-						<label>Registro: </label><?php echo $value['registro']; ?>
-						<br>
-						<label>Evento: </label><?php echo $value['evento']; ?>
-						<?php echo "<a href='php/image.php?".$value['evento']."' class='btn'>Gerar Certificado</a>" ?>
+						<img src="img/thumbnail.jpg">
+						<div class="content-user">
+							<label>Nome: </label><?php echo $value['nome']; ?>
+							<br>
+							<label>Livro: </label><?php echo $value['livro']; ?>
+							<br>
+							<label>Folha: </label><?php echo $value['folha']; ?>
+							<br>
+							<label>Registro: </label><?php echo $value['registro']; ?>
+							<br>
+							<label>Evento: </label><?php echo $value['evento']; ?>
+							<?php $_SESSION['user'][$value['id']] = $value ?>
+						</div>
+						<?php echo "<a href='php/image.php?".$value['id']."' class='btn'>Gerar Certificado</a>"; ?>
 					</section>
 				</div>
 			</div>
