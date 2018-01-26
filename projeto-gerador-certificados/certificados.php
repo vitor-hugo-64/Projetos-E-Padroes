@@ -28,7 +28,7 @@
 						<label>Registro: </label><?php echo $value['registro']; ?>
 						<br>
 						<label>Evento: </label><?php echo $value['evento']; ?>
-						<a href="php/image.php" class="btn">Gerar Certificado</a>
+						<?php echo "<a href='php/image.php?".$value['evento']."' class='btn'>Gerar Certificado</a>" ?>
 					</section>
 				</div>
 			</div>
