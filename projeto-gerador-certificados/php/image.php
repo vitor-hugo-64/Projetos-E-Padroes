@@ -7,13 +7,17 @@
 
 	header("Content-Type: image/png");
 	
-	$image = imagecreatefrompng("../img/certificados/bg-speaker.png");
+	$image = imagecreatefrompng("../img/certificado.png");
 
 	$titleColor = imagecolorallocate($image, 0, 0, 0);
 	$gray = imagecolorallocate($image, 100, 100, 100);
 
-	imagestring($image, 5, 510, 350, "Danilo De Oliveira", $titleColor);
+	$calibri = imageloadfont('../fonts/malgun.gdf');
 
+	imagestring($image, $calibri, 410, 330, $user['nome'], $titleColor);
+	imagestring($image, 2, 126, 704, $user['livro'], $titleColor);
+	imagestring($image, 2, 128, 716, $user['folha'], $titleColor);
+	imagestring($image, 2, 142, 729, $user['registro'], $titleColor);
 
 	
 

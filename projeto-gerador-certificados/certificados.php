@@ -12,7 +12,8 @@
 	<div class="cont">
 		<div class="row">
 			<div class="col c12 user">
-				<h1>Todos Os Certificados De <?php echo $email; ?></h1>
+				<h2>Abaixo Todos Os Certificados Dos Eventos Você Participou</h2>
+				<h3>Em Caso De Dúvida Consultar O CPA</h3>
 			</div>
 		</div>
 		<?php foreach ($data as $value) { ?>
