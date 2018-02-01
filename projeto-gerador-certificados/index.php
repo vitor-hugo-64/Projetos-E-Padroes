@@ -16,9 +16,9 @@
 					<h2>Liberato Certificados</h2>
 				</div>
 				<div class="form-login">
-					<form method="POST" action="php/consulta.php">
+					<form method="POST" action="php/consulta.php" data-js="form">
 						<label>Informe Seu Email</label>
-						<input type="email" name="email">
+						<input type="email" name="email" data-js="email">
 						<br>
 						<input type="submit" value="Consultar">
 					</form>
@@ -27,7 +27,7 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="script/script.js"></script>
 
 </body>
 </html>

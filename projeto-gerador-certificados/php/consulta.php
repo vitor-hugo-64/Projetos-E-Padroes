@@ -10,4 +10,8 @@
 	$_SESSION['data'] = $datasReturn;
 	$_SESSION['email'] = $email;
 
-	header("Location: ../certificados.php");
+	if ($datasReturn) {
+		header("Location: ../certificados.php");
+	} else {
+		header("Location: ../index.php?1");
+	}
